@@ -6,7 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+
 
 namespace Taxi_Booking_System
 {
@@ -63,8 +66,28 @@ namespace Taxi_Booking_System
             }
             else
             {
-                splitContainer1.Visible = Enabled;
+                String source = this.source_comboBox1.SelectedItem.ToString();
+                String destination = destination_comboBox.SelectedItem.ToString();
+
+                if (String.Compare(source, destination) == 0)
+                {
+                    String messageBoxText = "Source and Destination cannot be Same";
+                    String caption = "Error";
+                    MessageBox.Show(messageBoxText + source + " and " + destination, caption, MessageBoxButtons.OK);
+     
+                }
+                else
+                {
+                    splitContainer1.Visible = Enabled;
+
+                    String text = " Your Taxi from " + source + " to " + destination + " is 60$";
+                    label_details.Text = text;
+                }
             }
+            
+            
+                
+            
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -76,5 +99,38 @@ namespace Taxi_Booking_System
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            source_comboBox1.SelectedIndex = -1;
+            destination_comboBox.SelectedIndex = -1;
+            splitContainer1.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            String message = "Your Full Name: ";
+            String title = "Confirmation";
+            object mycalue;
+
+            mycalue = Microsoft.VisualBasic.Interaction.InputBox(message, title, "");
+            if((string)mycalue == "")
+            {
+
+            }
+            else
+            {
+                String source = this.source_comboBox1.SelectedItem.ToString();
+                String destination = destination_comboBox.SelectedItem.ToString();
+                this.Hide();
+                Form display = new Itinerary(mycalue.ToString(), source, destination,dateTimePicker1.Value.ToString());
+                display.ShowDialog();
+                this.Close();
+            }
+
+            
+        }
+
+        
     }
 }
