@@ -123,7 +123,7 @@ namespace Taxi_Booking_System
                 String source = this.source_comboBox1.SelectedItem.ToString();
                 String destination = destination_comboBox.SelectedItem.ToString();
                 this.Hide();
-                Form display = new Itinerary(mycalue.ToString(), source, destination,dateTimePicker1.Value.ToString());
+                Form display = new Itinerary(mycalue.ToString(), source, destination,dateTimePicker1.Text);
                 display.ShowDialog();
                 this.Close();
             }
@@ -131,6 +131,15 @@ namespace Taxi_Booking_System
             
         }
 
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("C:/Users/Isaac/source/repos/Taxi Booking System/Cars_list.html");
+        }
         
     }
 }
