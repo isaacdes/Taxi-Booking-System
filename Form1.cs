@@ -15,6 +15,8 @@ namespace Taxi_Booking_System
 {
     public partial class Form1 : Form
     {
+        String carType = "";
+        float cost = 0;
         public Form1()
         {
             InitializeComponent();
@@ -22,42 +24,38 @@ namespace Taxi_Booking_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            radioButton_Mini.Checked = true;
+            carType = "Mini";
         }
 
-        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
+        private int getCost(string source, string destination)
+        {
+            return 0;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (source_comboBox1.SelectedIndex == -1 && destination_comboBox.SelectedIndex == -1)
+            cost = 600;
+            if (source_comboBox1.SelectedIndex == -1 && destination_comboBox.SelectedIndex == -1 )
             {
                 string messageBoxText = "Source and Destination cannot be empty ";
                 string caption = "error";
@@ -78,9 +76,19 @@ namespace Taxi_Booking_System
                 }
                 else
                 {
+                    if (checkBox1.Checked == true)
+                        cost = cost + 10;
+                    if (checkBox2.Checked == true)
+                        cost = cost + 5;
+
+                    if (radioButton_Micro.Checked == true)
+                        cost = cost + 100;
+                    if (radioButton_Prime.Checked == true)
+                        cost = cost + 150;
+
                     splitContainer1.Visible = Enabled;
 
-                    String text = " Your Taxi from " + source + " to " + destination + " is 60$";
+                    String text = " Your Taxi from " + source + " to " + destination + " " +cost + "₹";
                     label_details.Text = text;
                 }
             }
@@ -120,10 +128,26 @@ namespace Taxi_Booking_System
             }
             else
             {
+                
+
+                if (radioButton_Micro.Checked == true)
+                    carType = "Micro";
+                else if (radioButton_Prime.Checked == true)
+                    carType = "Prime";
+
+                String insurance = "No", wifi = "No";
+                string addon = "";
+
+                if (checkBox1.Checked == true)
+                    addon = "Insurance";
+                if (checkBox2.Checked == true)
+                    addon = addon + ", Wifi";
+
                 String source = this.source_comboBox1.SelectedItem.ToString();
                 String destination = destination_comboBox.SelectedItem.ToString();
                 this.Hide();
-                Form display = new Itinerary(mycalue.ToString(), source, destination,dateTimePicker1.Text);
+                // Itineary(name, source, destination, date, car type, insurance, wifi)
+                Form display = new Itinerary(mycalue.ToString(), source, destination,dateTimePicker1.Text, carType, addon, cost);
                 display.ShowDialog();
                 this.Close();
             }

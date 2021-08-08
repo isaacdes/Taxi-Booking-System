@@ -45,20 +45,20 @@ namespace Taxi_Booking_System
             this.label7 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton_Mini = new System.Windows.Forms.RadioButton();
+            this.radioButton_Micro = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton_Prime = new System.Windows.Forms.RadioButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox_CarType = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_CarType.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -156,7 +156,7 @@ namespace Taxi_Booking_System
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("Elephant", 14.25F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
-            this.button1.Location = new System.Drawing.Point(648, 163);
+            this.button1.Location = new System.Drawing.Point(656, 189);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 48);
             this.button1.TabIndex = 8;
@@ -258,31 +258,31 @@ namespace Taxi_Booking_System
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // radioButton1
+            // radioButton_Mini
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Elephant", 14.25F);
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-            this.radioButton1.Location = new System.Drawing.Point(30, 31);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(75, 29);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Mini";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton_Mini.AutoSize = true;
+            this.radioButton_Mini.Font = new System.Drawing.Font("Elephant", 14.25F);
+            this.radioButton_Mini.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
+            this.radioButton_Mini.Location = new System.Drawing.Point(30, 31);
+            this.radioButton_Mini.Name = "radioButton_Mini";
+            this.radioButton_Mini.Size = new System.Drawing.Size(75, 29);
+            this.radioButton_Mini.TabIndex = 12;
+            this.radioButton_Mini.TabStop = true;
+            this.radioButton_Mini.Text = "Mini";
+            this.radioButton_Mini.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButton_Micro
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Elephant", 14.25F);
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-            this.radioButton2.Location = new System.Drawing.Point(30, 71);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(88, 29);
-            this.radioButton2.TabIndex = 13;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Micro";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton_Micro.AutoSize = true;
+            this.radioButton_Micro.Font = new System.Drawing.Font("Elephant", 14.25F);
+            this.radioButton_Micro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
+            this.radioButton_Micro.Location = new System.Drawing.Point(30, 71);
+            this.radioButton_Micro.Name = "radioButton_Micro";
+            this.radioButton_Micro.Size = new System.Drawing.Size(88, 29);
+            this.radioButton_Micro.TabIndex = 13;
+            this.radioButton_Micro.TabStop = true;
+            this.radioButton_Micro.Text = "Micro";
+            this.radioButton_Micro.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -320,18 +320,18 @@ namespace Taxi_Booking_System
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // radioButton3
+            // radioButton_Prime
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Elephant", 14.25F);
-            this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-            this.radioButton3.Location = new System.Drawing.Point(29, 106);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(89, 29);
-            this.radioButton3.TabIndex = 17;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Prime";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton_Prime.AutoSize = true;
+            this.radioButton_Prime.Font = new System.Drawing.Font("Elephant", 14.25F);
+            this.radioButton_Prime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
+            this.radioButton_Prime.Location = new System.Drawing.Point(29, 106);
+            this.radioButton_Prime.Name = "radioButton_Prime";
+            this.radioButton_Prime.Size = new System.Drawing.Size(89, 29);
+            this.radioButton_Prime.TabIndex = 17;
+            this.radioButton_Prime.TabStop = true;
+            this.radioButton_Prime.Text = "Prime";
+            this.radioButton_Prime.UseVisualStyleBackColor = true;
             // 
             // linkLabel1
             // 
@@ -346,20 +346,20 @@ namespace Taxi_Booking_System
             this.linkLabel1.Text = "List of Cars";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // groupBox1
+            // groupBox_CarType
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.linkLabel1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Font = new System.Drawing.Font("Elephant", 14.25F);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(47)))));
-            this.groupBox1.Location = new System.Drawing.Point(62, 142);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(154, 164);
-            this.groupBox1.TabIndex = 19;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Care Type";
+            this.groupBox_CarType.Controls.Add(this.radioButton_Mini);
+            this.groupBox_CarType.Controls.Add(this.linkLabel1);
+            this.groupBox_CarType.Controls.Add(this.radioButton_Micro);
+            this.groupBox_CarType.Controls.Add(this.radioButton_Prime);
+            this.groupBox_CarType.Font = new System.Drawing.Font("Elephant", 14.25F);
+            this.groupBox_CarType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(47)))));
+            this.groupBox_CarType.Location = new System.Drawing.Point(62, 142);
+            this.groupBox_CarType.Name = "groupBox_CarType";
+            this.groupBox_CarType.Size = new System.Drawing.Size(154, 164);
+            this.groupBox_CarType.TabIndex = 19;
+            this.groupBox_CarType.TabStop = false;
+            this.groupBox_CarType.Text = "Care Type";
             // 
             // Form1
             // 
@@ -369,7 +369,7 @@ namespace Taxi_Booking_System
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1316, 650);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox_CarType);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label8);
@@ -396,8 +396,8 @@ namespace Taxi_Booking_System
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_CarType.ResumeLayout(false);
+            this.groupBox_CarType.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,14 +420,14 @@ namespace Taxi_Booking_System
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox label_details;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton_Mini;
+        private System.Windows.Forms.RadioButton radioButton_Micro;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton_Prime;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox_CarType;
     }
 }
 

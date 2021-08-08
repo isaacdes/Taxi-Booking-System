@@ -102,6 +102,9 @@
   <ItemGroup>
     <Content Include="Cars_list.html" />
     <Content Include="Images\icon.ico" />
+    <Content Include="Images\Nissan-Micra_edited-1.jpg" />
+    <Content Include="Images\Toyota-Etios-Liva-Exterior-127727.jpg" />
+    <Content Include="Images\x19864749-maruti_ciaz.jpg.pagespeed.ic.MJg09MFeBp.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

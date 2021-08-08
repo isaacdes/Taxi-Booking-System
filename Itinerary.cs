@@ -12,7 +12,7 @@ namespace Taxi_Booking_System
 {
     public partial class Itinerary : Form
     {
-        public Itinerary(string name, string source, string destination, string date)
+        public Itinerary(string name, string source, string destination, string date, string cartype, string addon, float cost)
         {
             InitializeComponent();
 
@@ -20,7 +20,9 @@ namespace Taxi_Booking_System
             label_date.Text = date;
             label_source.Text = source;
             label_destination.Text = destination;
-            label_cost.Text = "60$";
+            label_cost.Text = cost.ToString() + "₹";
+            label_carType.Text = cartype;
+            label_addOns.Text = addon;
         }
 
         private void button4_Click(object sender, EventArgs e)
