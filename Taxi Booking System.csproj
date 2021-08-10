@@ -42,6 +42,9 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -84,7 +87,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -101,8 +106,11 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Cars_list.html" />
+    <None Include="Images\black-and-white-taxi-logo-modern-car-vector-31114049.jpg" />
     <Content Include="Images\icon.ico" />
+    <None Include="Images\images.jpg" />
     <Content Include="Images\Nissan-Micra_edited-1.jpg" />
+    <None Include="Images\taxi_logos_PNG26.png" />
     <Content Include="Images\Toyota-Etios-Liva-Exterior-127727.jpg" />
     <Content Include="Images\x19864749-maruti_ciaz.jpg.pagespeed.ic.MJg09MFeBp.jpg" />
   </ItemGroup>
