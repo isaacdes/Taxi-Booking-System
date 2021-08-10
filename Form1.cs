@@ -22,6 +22,7 @@ namespace Taxi_Booking_System
         //Fields
         private IconButton currenBt;
         private Panel leftBorderBtn;
+        private Form currentTaxiForm;
 
 
         public Form1()
@@ -91,14 +92,13 @@ namespace Taxi_Booking_System
         private void iconButton1_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(255, 101, 47));
-            String messageBoxText = "Hello";
-            String caption = "Error";
-            MessageBox.Show(messageBoxText, caption, MessageBoxButtons.OK);
+            OpenForm(new Dasboard());
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(255, 101, 47));
+            OpenForm(new Booking());
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
@@ -126,6 +126,7 @@ namespace Taxi_Booking_System
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            currentTaxiForm.Close();
             Reset();
         }
 
@@ -139,6 +140,22 @@ namespace Taxi_Booking_System
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void OpenForm(Form taxi)
+        {
+            if(currentTaxiForm != null)
+            {
+                currentTaxiForm.Close();
+            }
+            currentTaxiForm = taxi;
+            taxi.TopLevel = false;
+            taxi.FormBorderStyle = FormBorderStyle.None;
+            taxi.Dock = DockStyle.Fill;
+            panelForms.Controls.Add(taxi);
+            panelForms.Tag = taxi;
+            taxi.BringToFront();
+            taxi.Show();
         }
 
         /*

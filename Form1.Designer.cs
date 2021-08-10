@@ -38,8 +38,9 @@ namespace Taxi_Booking_System
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitle = new System.Windows.Forms.Panel();
-            this.currentIconChange = new FontAwesome.Sharp.IconPictureBox();
             this.labelTitle = new System.Windows.Forms.Label();
+            this.currentIconChange = new FontAwesome.Sharp.IconPictureBox();
+            this.panelForms = new System.Windows.Forms.Panel();
             this.panelLEftEdge.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -170,22 +171,8 @@ namespace Taxi_Booking_System
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(210, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1106, 90);
+            this.panelTitle.Size = new System.Drawing.Size(1106, 65);
             this.panelTitle.TabIndex = 1;
-            // 
-            // currentIconChange
-            // 
-            this.currentIconChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.currentIconChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
-            this.currentIconChange.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.currentIconChange.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
-            this.currentIconChange.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.currentIconChange.IconSize = 51;
-            this.currentIconChange.Location = new System.Drawing.Point(38, 12);
-            this.currentIconChange.Name = "currentIconChange";
-            this.currentIconChange.Size = new System.Drawing.Size(51, 58);
-            this.currentIconChange.TabIndex = 0;
-            this.currentIconChange.TabStop = false;
             // 
             // labelTitle
             // 
@@ -196,6 +183,29 @@ namespace Taxi_Booking_System
             this.labelTitle.Size = new System.Drawing.Size(0, 13);
             this.labelTitle.TabIndex = 1;
             // 
+            // currentIconChange
+            // 
+            this.currentIconChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.currentIconChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
+            this.currentIconChange.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.currentIconChange.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
+            this.currentIconChange.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.currentIconChange.IconSize = 39;
+            this.currentIconChange.Location = new System.Drawing.Point(38, 12);
+            this.currentIconChange.Name = "currentIconChange";
+            this.currentIconChange.Size = new System.Drawing.Size(39, 41);
+            this.currentIconChange.TabIndex = 0;
+            this.currentIconChange.TabStop = false;
+            // 
+            // panelForms
+            // 
+            this.panelForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelForms.Location = new System.Drawing.Point(210, 65);
+            this.panelForms.Name = "panelForms";
+            this.panelForms.Size = new System.Drawing.Size(1106, 585);
+            this.panelForms.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +214,7 @@ namespace Taxi_Booking_System
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1316, 650);
+            this.Controls.Add(this.panelForms);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelLEftEdge);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -233,6 +244,7 @@ namespace Taxi_Booking_System
         private System.Windows.Forms.Panel panelTitle;
         private FontAwesome.Sharp.IconPictureBox currentIconChange;
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Panel panelForms;
     }
 }
 
