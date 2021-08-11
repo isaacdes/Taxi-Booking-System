@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using FontAwesome.Sharp;
@@ -16,6 +15,7 @@ namespace Taxi_Booking_System
 {
     public partial class Form1 : Form
     {
+        public static Form1 instance;
      
         //Fields
         private IconButton currenBt;
@@ -26,6 +26,7 @@ namespace Taxi_Booking_System
         public Form1()
         {
             InitializeComponent();
+            instance = this;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7,60);
             panelLEftEdge.Controls.Add(leftBorderBtn);
@@ -86,6 +87,12 @@ namespace Taxi_Booking_System
                 currenBt.TextImageRelation = TextImageRelation.ImageBeforeText; ;
                 currenBt.ImageAlign = ContentAlignment.MiddleLeft;
             }
+        }
+
+        //to set name from login form
+        public void setName(string name)
+        {
+            labelName.Text = "Welcome " + name;
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -168,6 +175,10 @@ namespace Taxi_Booking_System
             Application.Exit();
         }
 
-        
+        private void iconButtonLogin_Click(object sender, EventArgs e)
+        {
+            LoginUI obj = new LoginUI();
+            obj.ShowDialog();
+        }
     }
 }

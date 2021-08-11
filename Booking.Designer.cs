@@ -63,6 +63,7 @@ namespace Taxi_Booking_System
             // 
             // groupBox_CarType
             // 
+            this.groupBox_CarType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox_CarType.Controls.Add(this.radioButton_Mini);
             this.groupBox_CarType.Controls.Add(this.linkLabel1);
             this.groupBox_CarType.Controls.Add(this.radioButton_Micro);
@@ -130,6 +131,7 @@ namespace Taxi_Booking_System
             // 
             // checkBox2
             // 
+            this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Elephant", 14.25F);
             this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
@@ -142,6 +144,7 @@ namespace Taxi_Booking_System
             // 
             // checkBox1
             // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Elephant", 14.25F);
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
@@ -154,6 +157,7 @@ namespace Taxi_Booking_System
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(47)))));
@@ -165,6 +169,7 @@ namespace Taxi_Booking_System
             // 
             // splitContainer1
             // 
+            this.splitContainer1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.splitContainer1.Location = new System.Drawing.Point(6, 347);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -248,6 +253,7 @@ namespace Taxi_Booking_System
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("Elephant", 14.25F);
@@ -262,6 +268,7 @@ namespace Taxi_Booking_System
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(449, 116);
@@ -273,6 +280,7 @@ namespace Taxi_Booking_System
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Elephant", 14.25F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(47)))));
@@ -284,6 +292,7 @@ namespace Taxi_Booking_System
             // 
             // destination_comboBox
             // 
+            this.destination_comboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.destination_comboBox.FormattingEnabled = true;
             this.destination_comboBox.Items.AddRange(new object[] {
             "Bangalore",
@@ -299,6 +308,7 @@ namespace Taxi_Booking_System
             // 
             // source_comboBox1
             // 
+            this.source_comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.source_comboBox1.FormattingEnabled = true;
             this.source_comboBox1.Items.AddRange(new object[] {
             "Bangalore",
@@ -314,6 +324,7 @@ namespace Taxi_Booking_System
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Elephant", 14.25F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(47)))));
@@ -325,6 +336,7 @@ namespace Taxi_Booking_System
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(47)))));
@@ -349,6 +361,7 @@ namespace Taxi_Booking_System
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(686, 85);
             this.pictureBox1.Name = "pictureBox1";

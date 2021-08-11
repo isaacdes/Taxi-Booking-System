@@ -53,7 +53,7 @@ namespace Taxi_Booking_System
             this.pictureBox1.Image = global::Taxi_Booking_System.Properties.Resources.taxi_logos_PNG26;
             this.pictureBox1.Location = new System.Drawing.Point(434, 193);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(207, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 145);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
