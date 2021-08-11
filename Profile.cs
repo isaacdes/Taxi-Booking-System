@@ -51,7 +51,7 @@ namespace Taxi_Booking_System
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.InitialDirectory = "C:/Users/Isaac/Desktop";
                 openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                 openFileDialog.FilterIndex = 2;
                 openFileDialog.RestoreDirectory = true;
@@ -100,7 +100,7 @@ namespace Taxi_Booking_System
             fontDialog.ShowEffects = true;
             fontDialog.ShowHelp = true;
             fontDialog.MaxSize = 40;
-            fontDialog.MinSize = 8;
+            fontDialog.MinSize = 2;
 
             DialogResult result = fontDialog.ShowDialog();
             if(result == DialogResult.OK)
