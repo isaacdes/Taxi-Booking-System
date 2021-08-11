@@ -29,10 +29,11 @@ namespace Taxi_Booking_System
         {
             MessageBox.Show("Thank You for Booking With Us", "Successfull Booking", MessageBoxButtons.OK);
 
-            this.Hide();
-            Form homepage = new Form1();
-            homepage.ShowDialog();
+            
             this.Close();
+            Booking obj = new Booking();
+            obj.resetForm();
+            
           
         }
     }

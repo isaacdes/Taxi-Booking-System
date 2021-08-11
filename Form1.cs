@@ -16,9 +16,7 @@ namespace Taxi_Booking_System
 {
     public partial class Form1 : Form
     {
-        String carType = "";
-        float cost = 0;
-
+     
         //Fields
         private IconButton currenBt;
         private Panel leftBorderBtn;
@@ -31,6 +29,7 @@ namespace Taxi_Booking_System
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7,60);
             panelLEftEdge.Controls.Add(leftBorderBtn);
+            OpenForm(new Dasboard());
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -80,7 +79,7 @@ namespace Taxi_Booking_System
             if(currenBt != null)
             {
                
-                currenBt.BackColor = Color.FromArgb(39, 39, 39);
+                currenBt.BackColor = Color.FromArgb(16, 16, 16);
                 currenBt.ForeColor = Color.FromArgb(255, 228, 0);
                 currenBt.TextAlign = ContentAlignment.MiddleLeft;
                 currenBt.IconColor = Color.FromArgb(255, 228, 0);
@@ -101,16 +100,7 @@ namespace Taxi_Booking_System
             OpenForm(new Booking());
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, Color.FromArgb(255, 101, 47));
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, Color.FromArgb(255, 101, 47));
-        }
-
+     
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             
@@ -127,6 +117,7 @@ namespace Taxi_Booking_System
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             currentTaxiForm.Close();
+            OpenForm(new Dasboard());
             Reset();
         }
 
@@ -142,7 +133,7 @@ namespace Taxi_Booking_System
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void OpenForm(Form taxi)
+        public void OpenForm(Form taxi)
         {
             if(currentTaxiForm != null)
             {
@@ -157,6 +148,28 @@ namespace Taxi_Booking_System
             taxi.BringToFront();
             taxi.Show();
         }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.FromArgb(255, 101, 47));
+            OpenForm(new Profile());
+            
+        }
+
+        private void iconButton3_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.FromArgb(255, 101, 47));
+            OpenForm(new Feedback());
+        }
+
+        private void iconButton4_Click_1(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.FromArgb(255, 101, 47));
+            Application.Exit();
+        }
+
+        
+    }
 
         /*
 
@@ -298,4 +311,4 @@ namespace Taxi_Booking_System
      }
      */
     }
-}
+
