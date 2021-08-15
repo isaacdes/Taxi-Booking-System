@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Taxi_Booking_System
 {
@@ -77,10 +78,17 @@ namespace Taxi_Booking_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+             
             if(username.Text == "isaac" && password.Text == "1234")
             {
                 Form1.instance.setName(username.Text);
-                this.Close();            }
+                this.Close();           
+            }
+            else
+            {
+                MessageBox.Show("Username/passwrod is wrong", "Login Error",MessageBoxButtons.OK);
+            }
         }
     }
 }

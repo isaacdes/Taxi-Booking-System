@@ -31,24 +31,24 @@ namespace Taxi_Booking_System
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelLEftEdge = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panelTitle = new System.Windows.Forms.Panel();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.panelForms = new System.Windows.Forms.Panel();
-            this.iconButtonLogin = new FontAwesome.Sharp.IconButton();
-            this.currentIconChange = new FontAwesome.Sharp.IconPictureBox();
             this.iconButtonExit = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelTitle = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
+            this.iconButtonLogin = new FontAwesome.Sharp.IconButton();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.currentIconChange = new FontAwesome.Sharp.IconPictureBox();
+            this.panelForms = new System.Windows.Forms.Panel();
             this.panelLEftEdge.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentIconChange)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLEftEdge
@@ -65,83 +65,6 @@ namespace Taxi_Booking_System
             this.panelLEftEdge.Name = "panelLEftEdge";
             this.panelLEftEdge.Size = new System.Drawing.Size(210, 650);
             this.panelLEftEdge.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 140);
-            this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // panelTitle
-            // 
-            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.panelTitle.Controls.Add(this.labelName);
-            this.panelTitle.Controls.Add(this.iconButtonLogin);
-            this.panelTitle.Controls.Add(this.labelTitle);
-            this.panelTitle.Controls.Add(this.currentIconChange);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(210, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1106, 65);
-            this.panelTitle.TabIndex = 1;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Elephant", 8.25F);
-            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
-            this.labelTitle.Location = new System.Drawing.Point(95, 40);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(0, 14);
-            this.labelTitle.TabIndex = 1;
-            // 
-            // panelForms
-            // 
-            this.panelForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForms.Location = new System.Drawing.Point(210, 65);
-            this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(1106, 585);
-            this.panelForms.TabIndex = 2;
-            // 
-            // iconButtonLogin
-            // 
-            this.iconButtonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.iconButtonLogin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButtonLogin.Font = new System.Drawing.Font("Elephant", 8.25F);
-            this.iconButtonLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
-            this.iconButtonLogin.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.iconButtonLogin.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
-            this.iconButtonLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonLogin.IconSize = 32;
-            this.iconButtonLogin.Location = new System.Drawing.Point(976, 0);
-            this.iconButtonLogin.Name = "iconButtonLogin";
-            this.iconButtonLogin.Size = new System.Drawing.Size(130, 65);
-            this.iconButtonLogin.TabIndex = 2;
-            this.iconButtonLogin.Text = "Login/Signup";
-            this.iconButtonLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButtonLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonLogin.UseVisualStyleBackColor = false;
-            this.iconButtonLogin.Click += new System.EventHandler(this.iconButtonLogin_Click);
-            // 
-            // currentIconChange
-            // 
-            this.currentIconChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.currentIconChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
-            this.currentIconChange.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.currentIconChange.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
-            this.currentIconChange.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.currentIconChange.IconSize = 39;
-            this.currentIconChange.Location = new System.Drawing.Point(38, 12);
-            this.currentIconChange.Name = "currentIconChange";
-            this.currentIconChange.Size = new System.Drawing.Size(39, 41);
-            this.currentIconChange.TabIndex = 0;
-            this.currentIconChange.TabStop = false;
             // 
             // iconButtonExit
             // 
@@ -252,6 +175,16 @@ namespace Taxi_Booking_System
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(210, 140);
+            this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Taxi_Booking_System.Properties.Resources.taxi_logos_PNG26;
@@ -263,6 +196,19 @@ namespace Taxi_Booking_System
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // panelTitle
+            // 
+            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.panelTitle.Controls.Add(this.labelName);
+            this.panelTitle.Controls.Add(this.iconButtonLogin);
+            this.panelTitle.Controls.Add(this.labelTitle);
+            this.panelTitle.Controls.Add(this.currentIconChange);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(210, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(1106, 65);
+            this.panelTitle.TabIndex = 1;
+            // 
             // labelName
             // 
             this.labelName.AutoSize = true;
@@ -273,6 +219,60 @@ namespace Taxi_Booking_System
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(0, 14);
             this.labelName.TabIndex = 3;
+            // 
+            // iconButtonLogin
+            // 
+            this.iconButtonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.iconButtonLogin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButtonLogin.Font = new System.Drawing.Font("Elephant", 8.25F);
+            this.iconButtonLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
+            this.iconButtonLogin.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.iconButtonLogin.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
+            this.iconButtonLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonLogin.IconSize = 32;
+            this.iconButtonLogin.Location = new System.Drawing.Point(976, 0);
+            this.iconButtonLogin.Name = "iconButtonLogin";
+            this.iconButtonLogin.Size = new System.Drawing.Size(130, 65);
+            this.iconButtonLogin.TabIndex = 2;
+            this.iconButtonLogin.Text = "Login/Signup";
+            this.iconButtonLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonLogin.UseVisualStyleBackColor = false;
+            this.iconButtonLogin.Click += new System.EventHandler(this.iconButtonLogin_Click);
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Elephant", 8.25F);
+            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
+            this.labelTitle.Location = new System.Drawing.Point(95, 40);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(0, 14);
+            this.labelTitle.TabIndex = 1;
+            // 
+            // currentIconChange
+            // 
+            this.currentIconChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.currentIconChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
+            this.currentIconChange.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.currentIconChange.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
+            this.currentIconChange.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.currentIconChange.IconSize = 39;
+            this.currentIconChange.Location = new System.Drawing.Point(38, 12);
+            this.currentIconChange.Name = "currentIconChange";
+            this.currentIconChange.Size = new System.Drawing.Size(39, 41);
+            this.currentIconChange.TabIndex = 0;
+            this.currentIconChange.TabStop = false;
+            // 
+            // panelForms
+            // 
+            this.panelForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelForms.Location = new System.Drawing.Point(210, 65);
+            this.panelForms.Name = "panelForms";
+            this.panelForms.Size = new System.Drawing.Size(1106, 585);
+            this.panelForms.TabIndex = 2;
             // 
             // Form1
             // 
@@ -288,14 +288,15 @@ namespace Taxi_Booking_System
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Taxi Booking System";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelLEftEdge.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentIconChange)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

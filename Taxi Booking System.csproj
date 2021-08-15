@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -85,6 +85,11 @@
     </Compile>
     <Compile Include="Dasboard.Designer.cs">
       <DependentUpon>Dasboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTaxiBookingSystem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTaxiBookingSystem.xsd</DependentUpon>
     </Compile>
     <Compile Include="Feedback.cs">
       <SubType>Form</SubType>
@@ -149,6 +154,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSetTaxiBookingSystem.xsc">
+      <DependentUpon>DataSetTaxiBookingSystem.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTaxiBookingSystem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTaxiBookingSystem.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTaxiBookingSystem.xss">
+      <DependentUpon>DataSetTaxiBookingSystem.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -178,6 +194,13 @@
   <ItemGroup>
     <Content Include="Cars_list.html" />
     <None Include="Images\black-and-white-taxi-logo-modern-car-vector-31114049.jpg" />
+    <Content Include="DatabaseTaxiBookingSystem.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DatabaseTaxiBookingSystem_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DatabaseTaxiBookingSystem.mdf</DependentUpon>
+    </Content>
     <Content Include="Images\icon.ico" />
     <None Include="Images\images.jpg" />
     <Content Include="Images\Nissan-Micra_edited-1.jpg" />
