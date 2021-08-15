@@ -1,0 +1,1 @@
+﻿ExecuteReader(select * from Admin)

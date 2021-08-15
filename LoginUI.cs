@@ -14,6 +14,7 @@ namespace Taxi_Booking_System
 {
     public partial class LoginUI : Form
     {
+        public int AccessCode = 0;
         public static LoginUI instance;
         public LoginUI()
         {
@@ -78,17 +79,53 @@ namespace Taxi_Booking_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-             
-            if(username.Text == "isaac" && password.Text == "1234")
+           ///*
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseTaxiBookingSystem.mdf;Integrated Security=True");
+            
+            string query = "select * from Admin where Id='"+username.Text+"' and password='"+password.Text+"'";
+            
+            con.Open();
+            SqlCommand command = new SqlCommand(query, con);
+            SqlDataReader reader = command.ExecuteReader();
+            if(reader.HasRows)
             {
-                Form1.instance.setName(username.Text);
-                this.Close();           
+                while (reader.Read())
+                {
+                    Form1.instance.setName(reader.GetString(1));
+                   
+                }
+                con.Close();
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Username/passwrod is wrong", "Login Error",MessageBoxButtons.OK);
+                MessageBox.Show("Username/passwrod is wrong ", "Login Error", MessageBoxButtons.OK);
             }
+
+            /*try
+            {
+                int res = (Int32)command.ExecuteScalar();
+                Form1.instance.setName(username.Text);
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Username/passwrod is wrong ", "Login Error", MessageBoxButtons.OK);
+            }*/
+            
+            
+           
+                
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            Registration obj = new Registration();
+            
+            obj.ShowDialog();
+           
         }
     }
 }
