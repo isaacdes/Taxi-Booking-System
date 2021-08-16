@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Taxi_Booking_System
 {
@@ -16,6 +17,11 @@ namespace Taxi_Booking_System
     {
         public int AccessCode = 0;
         public static LoginUI instance;
+
+        //static string constring = ConfigurationManager.ConnectionStrings["Taxi_Booking_System.Properties.Settings.DatabaseTaxiBookingSystemConnectionString" ].ConnectionString;
+        //SqlConnection con = new SqlConnection(constring);
+
+
         public LoginUI()
         {
 
@@ -79,27 +85,58 @@ namespace Taxi_Booking_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-           ///*
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseTaxiBookingSystem.mdf;Integrated Security=True");
+            ///*
+
+            SqlConnection con1 = new SqlConnection(@"Data Source=DESKTOP-HRD2S2U;Initial Catalog=TaxiBookingSystem;Integrated Security=True");
+
+            string query = "select * from AdminTable where Id='"+username.Text+"' and password='"+password.Text+"'";
             
-            string query = "select * from Admin where Id='"+username.Text+"' and password='"+password.Text+"'";
-            
-            con.Open();
-            SqlCommand command = new SqlCommand(query, con);
+            con1.Open();
+            SqlCommand command = new SqlCommand(query, con1);
             SqlDataReader reader = command.ExecuteReader();
             if(reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    Form1.instance.setName(reader.GetString(1));
+                    Form1.instance.setName(reader.GetString(1), 1);
                    
                 }
-                con.Close();
+               
+                
+                Form1.instance.iconButtonLogin.Text = "Logout";
+                Form1.instance.iconButtonLogin.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Username/passwrod is wrong ", "Login Error", MessageBoxButtons.OK);
+                reader.Close();
+                string query2 = "select * from Customers where Id='" + username.Text + "' and password='" + password.Text + "'";
+                
+                SqlCommand command2 = new SqlCommand(query2, con1);
+                SqlDataReader reader2 = command2.ExecuteReader();
+                if (reader2.HasRows)
+                {
+                    while (reader2.Read())
+                    {
+                        Form1.instance.setName(reader2.GetString(1), 2);
+
+                    }
+                    
+                    
+                    Form1.instance.iconButtonLogin.Text = "Logout";
+                    Form1.instance.iconButtonLogin.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+                    this.Close();
+                }
+                else
+                {
+                    reader2.Close();
+                    MessageBox.Show("Username/passwrod is wrong ", "Login Error", MessageBoxButtons.OK);
+                    
+                }
+                
+                
+                con1.Close();
+                
             }
 
             /*try

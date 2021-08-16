@@ -315,8 +315,8 @@ namespace Taxi_Booking_System
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButtonExit;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButtonLogin;
         private System.Windows.Forms.Label labelName;
+        public FontAwesome.Sharp.IconButton iconButtonLogin;
     }
 }
 

@@ -61,7 +61,10 @@
       <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -74,6 +77,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminBookings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminBookings.Designer.cs">
+      <DependentUpon>AdminBookings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Booking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,10 +95,11 @@
     <Compile Include="Dasboard.Designer.cs">
       <DependentUpon>Dasboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataSetTaxiBookingSystem.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetTaxiBookingSystem.xsd</DependentUpon>
+    <Compile Include="Deafult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deafult.Designer.cs">
+      <DependentUpon>Deafult.cs</DependentUpon>
     </Compile>
     <Compile Include="Feedback.cs">
       <SubType>Form</SubType>
@@ -129,11 +139,17 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminBookings.resx">
+      <DependentUpon>AdminBookings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Booking.resx">
       <DependentUpon>Booking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dasboard.resx">
       <DependentUpon>Dasboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deafult.resx">
+      <DependentUpon>Deafult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feedback.resx">
       <DependentUpon>Feedback.cs</DependentUpon>
@@ -163,17 +179,6 @@
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSetTaxiBookingSystem.xsc">
-      <DependentUpon>DataSetTaxiBookingSystem.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetTaxiBookingSystem.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetTaxiBookingSystem.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSetTaxiBookingSystem.xss">
-      <DependentUpon>DataSetTaxiBookingSystem.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -202,14 +207,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cars_list.html" />
+    <Content Include="TaxiBookingDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TaxiBookingDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>TaxiBookingDatabase.mdf</DependentUpon>
+    </Content>
     <None Include="Images\black-and-white-taxi-logo-modern-car-vector-31114049.jpg" />
-    <Content Include="DatabaseTaxiBookingSystem.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DatabaseTaxiBookingSystem_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>DatabaseTaxiBookingSystem.mdf</DependentUpon>
-    </Content>
     <Content Include="Images\icon.ico" />
     <None Include="Images\images.jpg" />
     <Content Include="Images\Nissan-Micra_edited-1.jpg" />

@@ -22,6 +22,8 @@ namespace Taxi_Booking_System
         private Panel leftBorderBtn;
         private Form currentTaxiForm;
 
+        public int LoginStatus = 0; //Admin =1, Customers=2, Ofline=0
+
 
         public Form1()
         {
@@ -90,9 +92,15 @@ namespace Taxi_Booking_System
         }
 
         //to set name from login form
-        public void setName(string name)
+        public void setName(string name, int status)
         {
-            labelName.Text = "Welcome " + name;
+            
+            if (status == 1)
+                labelName.Text = "Welcome " + name + "(Admin Access)";
+            if (status == 2)
+                labelName.Text = "Welcome " + name + "(User)";
+            LoginStatus = status;
+
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -102,9 +110,18 @@ namespace Taxi_Booking_System
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, Color.FromArgb(255, 101, 47));
-            OpenForm(new Booking());
+        {//Booking button
+            if(LoginStatus == 0)
+            {
+                ActivateButton(sender, Color.FromArgb(255, 101, 47));
+                OpenForm(new Deafult());
+            }
+            else
+            {
+                ActivateButton(sender, Color.FromArgb(255, 101, 47));
+                OpenForm(new Booking());
+            }
+            
         }
 
      
@@ -158,8 +175,18 @@ namespace Taxi_Booking_System
 
         private void iconButton5_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, Color.FromArgb(255, 101, 47));
-            OpenForm(new Profile());
+            if (LoginStatus == 0)
+            {
+                ActivateButton(sender, Color.FromArgb(255, 101, 47));
+                OpenForm(new Deafult());
+                MessageBox.Show("Login/Signup pls", "Login Required", MessageBoxButtons.OK);
+            }
+            else
+            {
+                ActivateButton(sender, Color.FromArgb(255, 101, 47));
+                OpenForm(new Profile());
+            }
+            
             
         }
 
@@ -177,8 +204,21 @@ namespace Taxi_Booking_System
 
         private void iconButtonLogin_Click(object sender, EventArgs e)
         {
-            LoginUI obj = new LoginUI();
-            obj.ShowDialog();
+            if(labelName.Text != "")
+            {
+                LoginStatus = 0;
+                labelName.Text = "";
+                iconButtonLogin.Text = "Login/Signup";
+                iconButtonLogin.IconChar = IconChar.UserPlus;
+                MessageBox.Show("Succesfully Logged Out", "Logout", MessageBoxButtons.OK);
+            }
+            else
+            {
+                
+                LoginUI obj = new LoginUI();
+                obj.ShowDialog();
+            }
+            
         }
     }
 }
