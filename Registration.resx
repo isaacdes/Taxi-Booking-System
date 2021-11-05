@@ -117,17 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="taxi_logos_PNG26" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\taxi_logos_PNG26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="black-and-white-taxi-logo-modern-car-vector-31114049" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\black-and-white-taxi-logo-modern-car-vector-31114049.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIBQAAAEAIAB4CgAAFgAAACgAAAAgAAAAKAAAAAEAIAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAA
+        AAD19fX/9vb2//b29v/29vb/9vb2//b29v/19fX/9vb2//b29v/19fX/9/f3//j4+P/4+Pj/+Pj4//j4
+        +P/39/f/+Pj4//j4+P/4+Pj/+Pj4//j4+P/39/f/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//b2
+        9v/29vb/9/f3//b29v/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//f39//T09P/urq6/729
+        vf+8vLz/xcXF/9nZ2f/BwcH/xsbG/8TExP/ExMT/vr6+/9bW1v/39/f/9vb2//b29v/19fX/9vb2//b2
+        9v/19fX/9vb2//b29v/19fX/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/+Pj4/7a2
+        tv+Tk5P/rq6u/6enp/+rq6v/xsbG/6Ghof+qqqr/n5+f/6enp/+qqqr/zMzM//f39//29vb/9vb2//X1
+        9f/29vb/9vb2//X19f/29vb/9vb2//X19f/19fX/9vb2//b29v/19fX/9vb2//b29v/19fX/9vb2//b2
+        9v/29vb/7+/v//Dw8P/39/f/9fX1//Ly8v/y8vL/7u7u//b29v/t7e3/8/Pz//f39//29vb/9vb2//b2
+        9v/29vb/9vb2//b29v/29vb/9vb2//X19f/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//b2
+        9v/29vb/9vb2//b29v/29vb/9vb2//b29v/39/f/+vr6//r6+v/6+vr/+vn5//j4+P/29vb/9vb2//b2
+        9v/29vb/9vb2//b29v/19fX/9vb2//b29v/19fX/9vb2//b29v/19fX/9vb2//b29v/29vb/9vb2//b2
+        9v/29vb/9vb2//b29v/29vb/9vb2//X19f/29vb/+Pf3/93Z2f+urq7/j5iY/5CZmf+urq7/3tvb//j3
+        9//29vb/9fX1//X19f/29vb/9vb2//X19f/29vb/9vb2//X19f/29vb/9vb2//X19f/19fX/9vb2//b2
+        9v/19fX/9vb2//b29v/19fX/9vb2//b29v/19fX/9/f3/+7t7f+SmZn/LHd3/wmiov8Bv7//Ab+//wmh
+        of8ueHj/kpmZ/+7s7P/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//X19f/29vb/9vb2//b2
+        9v/29vb/9fX1//b29v/29vb/9vb2//b29v/29vb/9vb2//f39//v7e3/dIeH/wifn/8A9PT/AP///wD/
+        //8A////AP///wDz8/8In5//coWF/+7t7f/29vb/9vb2//b29v/19fX/9vb2//b29v/19fX/9vb2//b2
+        9v/19fX/9fX1//b29v/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/+Pf3/5Wdnv8KgYD/BJ6e/wLa
+        2v8B39//Ad7e/wHe3v8B39//Atra/wSenv8KgYD/lZ2d//j39//29vb/9vb2//b29v/29vb/9vb2//b2
+        9v/29vb/9vb2//b29v/19fX/9vb2//b29v/19fX/9vb2//b29v/19fX/9vb2//f39//f3Nz/L3x8/wCq
+        qv8BDAz/Ahwc/wEdHf8BHBz/ARwc/wEdHf8CHBz/AQwM/wCqqv8yfX3/4d7e//f39//29vb/9vb2//b2
+        9v/29vb/9vb2//X19f/29vb/9vb2//b29v/29vb/9fX1//b29v/29vb/9vb2//b29v/19fX/+fn5/7Sz
+        s/8LoqL/Arq6/wEHB/8IHx//EktL/xJNTf8STU3/EktL/wgfH/8BBwf/Arq6/wuiov+1tLT/+fn5//b2
+        9v/19fX/9vb2//b29v/19fX/9vb2//b29v/19fX/9fX1//b29v/29vb/9fX1//b29v/29vb/9fX1//b2
+        9v/6+fn/mJ6e/wO7u/8D0ND/BnBw/wpPT/8SRkb/ElJS/xJSUv8SRkb/Ck5O/wZwcP8D0ND/A7q7/5mf
+        n//6+fn/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//b2
+        9v/29vb/9vb2//r6+v+Zn5//Arm5/wPw8P8GWVn/AhgY/wENDf8ACQn/AAkJ/wENDf8CGBj/BlhY/wPv
+        7/8DuLj/mp+g//r6+v/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/9fX1//b2
+        9v/29vb/9vb2//b29v/29vb/+fn5/7W0tP8Lnp7/Aenp/wepqf8GxMT/AsvL/wLCwv8CwsL/AsrK/wbD
+        w/8Hqan/Aunp/wycnP+1tLT/+fn5//b29v/19fX/9vb2//b29v/19fX/9vb2//b29v/19fX/9fX1//b2
+        9v/29vb/9fX1//b29v/29vb/9fX1//b29v/39/f/4N3d/zF2dv8A7+//Af7+/wbd3f8Gzc3/Bs7O/wbN
+        zf8GzMz/Bd3d/wH+/v8A7u7/NHd3/+Lf3//39/f/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//b2
+        9v/19fX/9vb2//b29v/19fX/9vb2//b29v/19fX/9vb2//b29v/49/f/mJ2d/wmXl/8A/Pz/Afz8/wjB
+        wf8LlZX/C5KS/wqzs/8B+vr/APz8/wmXl/+XnZ3/+Pf3//b29v/29vb/9vb2//b29v/29vb/9vb2//b2
+        9v/29vb/9vb2//b29v/29vb/9fX1//b29v/29vb/9vb2//b29v/29vb/9vb2//f39//v7u7/d4eH/wmY
+        mP8A8PD/BNzc/wXV1f8F19f/BeHh/wDw8P8JmJj/dYWF/+/t7f/29vb/9vb2//b29v/19fX/9vb2//b2
+        9v/19fX/9vb2//b29v/19fX/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//f3
+        9//v7e3/lZub/y53d/8JoqL/Ab6+/wG+vv8JoaH/MHh4/5Wamv/v7e3/9/f3//b29v/29vb/9vb2//b2
+        9v/29vb/9vb2//b29v/29vb/9vb2//b29v/19fX/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//b2
+        9v/29vb/9vb2//b29v/49/f/3tvb/7CwsP+Smpr/k5ub/7CwsP/f3Nz/+Pf3//f39//29vb/9vb2//b2
+        9v/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/9vb2//b29v/29vb/9fX1//b29v/29vb/9fX1//b2
+        9v/29vb/9vb2//b29v/19fX/9fX1//b29v/39/f/+vr6//v6+v/6+fn/+vr6//j4+P/19fX/9vb2//b2
+        9v/19fX/9vb2//b29v/19fX/9vb2//b29v/19fX/9vb2//b29v/19fX/AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAA=
+</value>
   </data>
 </root>
