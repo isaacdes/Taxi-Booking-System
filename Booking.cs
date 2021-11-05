@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace Taxi_Booking_System
 {
     public partial class Booking : Form
     {
-        String carType = "";
+        public static Booking instance;
+        String carType = "Mini";
         float cost = 0;
         public Booking()
         {
@@ -82,40 +85,61 @@ namespace Taxi_Booking_System
 
         private void button4_Click(object sender, EventArgs e)
         {
-            String message = "Your Full Name: ";
-            String title = "Confirmation";
-            object mycalue;
+            int regId = Form1.instance.regnum;
+            
+            if (radioButton_Micro.Checked == true)
+                carType = "Micro";
+            else if (radioButton_Prime.Checked == true)
+                carType = "Prime";
+            
+            string addon = "";
 
-            mycalue = Microsoft.VisualBasic.Interaction.InputBox(message, title, "");
-            if ((string)mycalue == "")
-            {
+            if (checkBox1.Checked == true)
+                addon = "Insurance";
+            if (checkBox2.Checked == true)
+                addon = addon + ", Wifi";
 
-            }
-            else
-            {
+            if (addon == "")
+                addon = "None";
+            
+            String source = this.source_comboBox1.SelectedItem.ToString();
+            String destination = destination_comboBox.SelectedItem.ToString();
+            
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Sem5\DotNetLabs\Taxi Booking System\Database1.mdf;Integrated Security=True");
 
 
-                if (radioButton_Micro.Checked == true)
-                    carType = "Micro";
-                else if (radioButton_Prime.Checked == true)
-                    carType = "Prime";
+                con.Open();
+                String query = "insert into Bookings(source, destination, dateOfJourney, carType, AddOns, cost, CustomerId, status)values('" + source + "', '" + destination + "', '"+dateTimePicker1.Text+"' ,'"+carType+"', '"+addon+"' ,'"+cost+"', '"+regId+"', 'In Review')";
+                SqlCommand command = new SqlCommand();
+                command.Connection = con;
+                command.CommandType = CommandType.Text;
+                command.CommandText = query;
 
-                String insurance = "No", wifi = "No";
-                string addon = "";
+                try
+                {
 
-                if (checkBox1.Checked == true)
-                    addon = "Insurance";
-                if (checkBox2.Checked == true)
-                    addon = addon + ", Wifi";
+                    command.ExecuteNonQuery();
 
-                String source = this.source_comboBox1.SelectedItem.ToString();
-                String destination = destination_comboBox.SelectedItem.ToString();
-                this.Hide();
+                    Form display = new Itinerary(Form1.instance.regName, source, destination, dateTimePicker1.Text, carType, addon, cost);
+                    display.ShowDialog();
+
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed To Book : " + ex, "Error", MessageBoxButtons.OK);
+
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+               
                 // Itineary(name, source, destination, date, car type, insurance, wifi)
-                Form display = new Itinerary(mycalue.ToString(), source, destination, dateTimePicker1.Text, carType, addon, cost);
-                display.ShowDialog();
+                
                 this.Close();
-            }
+            
         }
     }
 }

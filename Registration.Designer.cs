@@ -37,9 +37,6 @@ namespace Taxi_Booking_System
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.password = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.username = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.button1 = new System.Windows.Forms.Button();
@@ -49,8 +46,6 @@ namespace Taxi_Booking_System
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,7 +54,6 @@ namespace Taxi_Booking_System
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.button1);
@@ -72,7 +66,7 @@ namespace Taxi_Booking_System
             // 
             this.panel4.Controls.Add(this.iconPictureBox1);
             this.panel4.Controls.Add(this.name);
-            this.panel4.Location = new System.Drawing.Point(256, 40);
+            this.panel4.Location = new System.Drawing.Point(259, 74);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(187, 34);
             this.panel4.TabIndex = 9;
@@ -136,46 +130,12 @@ namespace Taxi_Booking_System
             this.password.Text = "password";
             this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.iconPictureBox2);
-            this.panel2.Controls.Add(this.username);
-            this.panel2.Location = new System.Drawing.Point(14, 37);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 34);
-            this.panel2.TabIndex = 6;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.IdCard;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(167)))), ((int)(((byte)(108)))));
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.Location = new System.Drawing.Point(3, 0);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox2.TabIndex = 2;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // username
-            // 
-            this.username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.username.Font = new System.Drawing.Font("Elephant", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(116)))), ((int)(((byte)(116)))));
-            this.username.Location = new System.Drawing.Point(41, 9);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(139, 22);
-            this.username.TabIndex = 1;
-            this.username.Text = "userId";
-            this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(47)))));
-            this.button2.Location = new System.Drawing.Point(294, 276);
+            this.button2.Location = new System.Drawing.Point(302, 239);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 23);
             this.button2.TabIndex = 5;
@@ -204,7 +164,7 @@ namespace Taxi_Booking_System
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(294, 232);
+            this.button1.Location = new System.Drawing.Point(302, 195);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 23);
             this.button1.TabIndex = 3;
@@ -245,9 +205,6 @@ namespace Taxi_Booking_System
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,9 +214,6 @@ namespace Taxi_Booking_System
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Button button2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Button button1;

@@ -7,16 +7,52 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Taxi_Booking_System
 {
     public partial class Profile : Form
+
     {
+        public static Profile instance;
+        int id;
         public Profile()
         {
             InitializeComponent();
-           
+            instance = this;
+
+            id = Form1.instance.regnum;
+            textBoxFirstName.Text = Form1.instance.labelName.Text;
+
+
+            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Sem5\DotNetLabs\Taxi Booking System\Database1.mdf;Integrated Security=True");
+
+            string query = "select * from Customers where Id='" + id + "' ";
+
+            con1.Open();
+            SqlCommand command = new SqlCommand(query, con1);
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    try
+                    {
+                        textBoxFirstName.Text = reader.GetString(1);
+                        richTextBox1.Text = reader.GetString(3);
+                    }
+                    catch(Exception ex)
+                    {
+
+                    }
+                    
+
+                }
+            }
+
+            con1.Close();
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -111,10 +147,47 @@ namespace Taxi_Booking_System
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thank You for Updating the details", "Message", MessageBoxButtons.OK);
+            
+            
+
+            SqlConnection sc = new SqlConnection();
+            SqlCommand com = new SqlCommand();
+
+            sc.ConnectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Sem5\DotNetLabs\Taxi Booking System\Database1.mdf;Integrated Security=True");
+            sc.Open();
+            SqlCommand cmd = new SqlCommand("update Customers set info='"+ richTextBox1.Text + "' where Id='"+id+"'", sc);
+            cmd.ExecuteNonQuery();
+            sc.Close();
+
+
 
             this.Controls.Clear();
             this.InitializeComponent();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show("User has been Deleted", "Message", MessageBoxButtons.OK);
+            SqlConnection sc = new SqlConnection();
+            SqlCommand com = new SqlCommand();
+
+            sc.ConnectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Sem5\DotNetLabs\Taxi Booking System\Database1.mdf;Integrated Security=True");
+            sc.Open();
+
+            SqlCommand cmd = new SqlCommand("delete from Customers  where Id='" + id + "'",sc);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("User is deleted Succesfully ","Deletion",MessageBoxButtons.OK);
+            sc.Close();
+
+            
+
+            this.Controls.Clear();
+            this.InitializeComponent();
+
+            Form1.instance.reset();
+
 
         }
     }

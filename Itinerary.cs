@@ -12,6 +12,7 @@ namespace Taxi_Booking_System
 {
     public partial class Itinerary : Form
     {
+        public static Itinerary instance;
         public Itinerary(string name, string source, string destination, string date, string cartype, string addon, float cost)
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace Taxi_Booking_System
             this.Close();
             Booking obj = new Booking();
             obj.resetForm();
+            Form1.instance.resetBookings();
             
           
         }

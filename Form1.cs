@@ -21,8 +21,11 @@ namespace Taxi_Booking_System
         private IconButton currenBt;
         private Panel leftBorderBtn;
         private Form currentTaxiForm;
+        public int regnum;
+        public String regName = "";
 
         public int LoginStatus = 0; //Admin =1, Customers=2, Ofline=0
+        public int Id;
 
 
         public Form1()
@@ -91,14 +94,27 @@ namespace Taxi_Booking_System
             }
         }
 
-        //to set name from login form
-        public void setName(string name, int status)
+        public void reset()
         {
-            
+            LoginStatus = 0;
+            labelName.Text = "";
+            iconButtonLogin.Text = "Login/Signup";
+            iconButtonLogin.IconChar = IconChar.UserPlus;
+
+        }
+        //to set name from login form
+        public void setName(string name, int status, int num)
+        {
+
+            regnum = num;
             if (status == 1)
                 labelName.Text = "Welcome " + name + "(Admin Access)";
             if (status == 2)
+            {
                 labelName.Text = "Welcome " + name + "(User)";
+                regName = name;
+            }
+                
             LoginStatus = status;
 
         }
@@ -116,14 +132,33 @@ namespace Taxi_Booking_System
                 ActivateButton(sender, Color.FromArgb(255, 101, 47));
                 OpenForm(new Deafult());
             }
+            else if(LoginStatus == 2)
+            {
+                ActivateButton(sender, Color.FromArgb(255, 101, 47));
+                OpenForm(new Bookings_list());
+            }
             else
             {
                 ActivateButton(sender, Color.FromArgb(255, 101, 47));
-                OpenForm(new Booking());
+                OpenForm(new AdminBookings());
             }
             
         }
 
+         public void openBooking()
+        {
+            OpenForm(new Booking());
+        }
+
+        public void resetBookings()
+        {
+            OpenForm(new Bookings_list());
+        }
+
+        public void resetAdminBooking()
+        {
+            OpenForm(new AdminBookings());
+        }
      
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -136,6 +171,9 @@ namespace Taxi_Booking_System
             leftBorderBtn.Visible = false;
             currentIconChange.IconChar = IconChar.None;
             labelTitle.Text = "";
+
+            
+            OpenForm(new Dasboard());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -181,7 +219,7 @@ namespace Taxi_Booking_System
                 OpenForm(new Deafult());
                 MessageBox.Show("Login/Signup pls", "Login Required", MessageBoxButtons.OK);
             }
-            else
+            else if( LoginStatus == 2)
             {
                 ActivateButton(sender, Color.FromArgb(255, 101, 47));
                 OpenForm(new Profile());
@@ -211,6 +249,7 @@ namespace Taxi_Booking_System
                 iconButtonLogin.Text = "Login/Signup";
                 iconButtonLogin.IconChar = IconChar.UserPlus;
                 MessageBox.Show("Succesfully Logged Out", "Logout", MessageBoxButtons.OK);
+                OpenForm(new Deafult());
             }
             else
             {
@@ -222,4 +261,3 @@ namespace Taxi_Booking_System
         }
     }
 }
-5 

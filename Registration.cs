@@ -35,7 +35,7 @@ namespace Taxi_Booking_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-HRD2S2U;Initial Catalog=TaxiBookingSystem;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Sem5\DotNetLabs\Taxi Booking System\Database1.mdf;Integrated Security=True");
 
 
             con.Open();
@@ -69,7 +69,7 @@ namespace Taxi_Booking_System
 
         private string LastIdNumber()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-HRD2S2U;Initial Catalog=TaxiBookingSystem;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Sem5\DotNetLabs\Taxi Booking System\Database1.mdf;Integrated Security=True");
 
             con.Open();
             SqlCommand command = new SqlCommand("select top 1 Id from Customers order by Id desc", con);

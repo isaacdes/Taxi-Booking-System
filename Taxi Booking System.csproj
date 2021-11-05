@@ -62,7 +62,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -89,11 +89,22 @@
     <Compile Include="Booking.Designer.cs">
       <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bookings_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bookings_list.Designer.cs">
+      <DependentUpon>Bookings_list.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dasboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dasboard.Designer.cs">
       <DependentUpon>Dasboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Deafult.cs">
       <SubType>Form</SubType>
@@ -145,6 +156,9 @@
     <EmbeddedResource Include="Booking.resx">
       <DependentUpon>Booking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bookings_list.resx">
+      <DependentUpon>Bookings_list.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dasboard.resx">
       <DependentUpon>Dasboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +193,17 @@
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Database1DataSet.xsc">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet.xss">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -207,14 +232,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cars_list.html" />
-    <Content Include="TaxiBookingDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TaxiBookingDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>TaxiBookingDatabase.mdf</DependentUpon>
-    </Content>
     <None Include="Images\black-and-white-taxi-logo-modern-car-vector-31114049.jpg" />
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="Images\icon.ico" />
     <None Include="Images\images.jpg" />
     <Content Include="Images\Nissan-Micra_edited-1.jpg" />

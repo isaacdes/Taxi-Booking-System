@@ -87,7 +87,7 @@ namespace Taxi_Booking_System
         {
             ///*
 
-            SqlConnection con1 = new SqlConnection(@"Data Source=DESKTOP-HRD2S2U;Initial Catalog=TaxiBookingSystem;Integrated Security=True");
+            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Sem5\DotNetLabs\Taxi Booking System\Database1.mdf;Integrated Security=True");
 
             string query = "select * from AdminTable where Id='"+username.Text+"' and password='"+password.Text+"'";
             
@@ -98,7 +98,7 @@ namespace Taxi_Booking_System
             {
                 while (reader.Read())
                 {
-                    Form1.instance.setName(reader.GetString(1), 1);
+                    Form1.instance.setName(reader.GetString(1), 1, Int32.Parse(username.Text));
                    
                 }
                
@@ -118,7 +118,8 @@ namespace Taxi_Booking_System
                 {
                     while (reader2.Read())
                     {
-                        Form1.instance.setName(reader2.GetString(1), 2);
+                        Form1.instance.setName(reader2.GetString(1), 2, Int32.Parse(username.Text));
+                       
 
                     }
                     
@@ -130,6 +131,9 @@ namespace Taxi_Booking_System
                 else
                 {
                     reader2.Close();
+
+
+
                     MessageBox.Show("Username/passwrod is wrong ", "Login Error", MessageBoxButtons.OK);
                     
                 }
